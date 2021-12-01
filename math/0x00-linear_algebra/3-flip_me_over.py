@@ -8,8 +8,10 @@ def matrix_transpose(matrix):
     new = []
     for i in range(len(matrix[0])):
         temp = []
-        for filas in matrix:
-            # print(filas[i])
-            temp += [filas[i]]
+        for j in matrix:
+            # print(j[i])
+            temp += [j[i]]
+            print(temp)
         new += [temp]
+        # print("-", new)
     return new
