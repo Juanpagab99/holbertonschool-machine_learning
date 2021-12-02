@@ -3,6 +3,7 @@
 
 
 def add_matrices2D(mat1, mat2):
+    """2D add matrices"""
     if len(mat1) == len(mat2):
         new = []
         for i in range(len(mat1)):

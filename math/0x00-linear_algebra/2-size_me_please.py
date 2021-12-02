@@ -3,10 +3,11 @@
 
 
 def matrix_shape(matrix):
+    """Matrix shape"""
     new = []
     try:
         while len(matrix) > 0:
-            # print("-", len(matrix))
+            print("-", len(matrix))
             new.append(len(matrix))
             matrix = matrix[0]
             # print("-", matrix)

@@ -3,6 +3,7 @@
 
 
 def matrix_transpose(matrix):
+    """Matrix transpose"""
     # print(len(matrix[0]))
     # para saber las columnas
     new = []
