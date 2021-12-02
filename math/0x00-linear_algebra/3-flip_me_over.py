@@ -12,7 +12,7 @@ def matrix_transpose(matrix):
         for j in matrix:
             # print(j[i])
             temp += [j[i]]
-            print(temp)
+            # print(temp)
         new += [temp]
         # print("-", new)
     return new
