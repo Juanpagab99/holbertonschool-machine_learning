@@ -6,7 +6,9 @@ def poly_integral(poly, C=0):
     """Integrate all"""
     if type(poly) is not list and not poly:
         return None
-    elif len(poly) == 0 and type(C) is not int:
+    elif len(poly) == 0:
+        return None
+    elif type(C) is not int:
         return None
     elif poly == [0]:
         return [C]
