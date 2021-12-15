@@ -20,9 +20,8 @@ class Exponential:
 
     def pdf(self, x):
         """Number of successes"""
-        if x:
-            if x < 0:
-                return 0
-            else:
-                return self.lambtha * pow(2.7182818285, -1 *
-                                          self.lambtha * x)
+        if x < 0:
+            return 0
+        else:
+            return self.lambtha * pow(2.7182818285, -1 *
+                                      self.lambtha * x)
