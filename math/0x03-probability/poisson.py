@@ -17,3 +17,25 @@ class Poisson:
             if len(data) < 2:
                 raise ValueError("data must contain multiple values")
             self.lambtha = sum(data) / len(data)
+
+    def pmf(self, k):
+        """Number of successes"""
+        if k:
+            if type(k) != int:
+                k = int(k)
+            if k < 0:
+                return 0
+            return (pow(self.lambtha, k) *
+                    pow(2.7182818285, -1 * self.lambtha) /
+                    func_factorial(k))
+
+
+def func_factorial(x):
+    """Return factorial of n"""
+    if x < 0:
+        return None
+    if x == 0:
+        return 1
+    if x < 2:
+        return 1
+    return x * func_factorial(x - 1)
