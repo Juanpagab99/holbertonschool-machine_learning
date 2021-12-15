@@ -19,9 +19,16 @@ class Exponential:
             self.lambtha = (1 / (sum(data) / len(data)))
 
     def pdf(self, x):
-        """Number of successes"""
+        """Time period"""
         if x < 0:
             return 0
         else:
             return self.lambtha * pow(2.7182818285, -1 *
                                       self.lambtha * x)
+
+    def cdf(self, x):
+        """Time period"""
+        if x < 0:
+            return 0
+        else:
+            return 1 - pow(2.7182818285, -1 * self.lambtha * x)
