@@ -29,6 +29,17 @@ class Poisson:
                     pow(2.7182818285, -1 * self.lambtha) /
                     func_factorial(k))
 
+    def cdf(self, k):
+        """Number of successes"""
+        k = int(k)
+        if k < 0:
+            return 0
+        else:
+            cdf = 0
+            for i in range(k + 1):
+                cdf += self.pmf(i)
+            return cdf
+
 
 def func_factorial(x):
     """Return factorial of n"""
